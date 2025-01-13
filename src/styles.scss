@@ -1,1 +1,163 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./colors" as *;
+@use "./typography" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  font-family: $font-family-primary;
+  border: none;
+  cursor: pointer;
+  font-size: $font-size-base;
+}
+
+textarea, input {
+  border: none;
+  outline: none;
+  resize: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  box-shadow: none;
+  line-height: 24px;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+}
+
+html, body { height: 100%; }
+
+body.light-theme {
+  background-color: $color-white;
+  color: $text-muted;
+
+  .markdown-header {
+    background-color: $color-base-dark-2;
+    color: $color-white;
+
+    &__burger-menu {
+      background-color: $color-base-dark-4;
+    }
+  }
+
+  .modal-delete {
+    background-color: $color-white;
+
+    &__title {
+      color: $color-base-dark-4;
+    }
+
+    &__content {
+      color: $text-muted;
+    }
+  }
+  
+  .cdk-overlay-backdrop {
+    background-color: rgba($color-base-dark-1, 0.6) !important;
+  }
+
+ .markdown {
+    &__header {
+      background-color: $color-off-white;
+    }
+
+    &__divider {
+      background-color: $color-neutral-ultralight;
+    }
+
+    &__preview {
+      h1, h2, h3, h4, h5, h6 {
+        color: $color-base-dark-4;
+      }
+      pre, blockquote {
+        background-color: $color-off-white;
+        p {
+          color: $color-base-dark-4;
+        }
+        code {
+          color: $color-base-dark-4;
+        }
+      }
+    }
+  }
+}
+
+body.dark-theme {
+  background-color: $color-base-dark-1;
+  color: $text-secondary;
+
+  .markdown-header {
+    background-color: $color-base-dark-3;
+    color: $color-white;
+
+    &__burger-menu {
+      background-color: $color-base-dark-4;
+    }
+  }
+
+  .sidebar {
+    background-color: $color-base-dark-2;
+  }
+
+  .modal-delete {
+    background-color: $color-base-dark-2;
+
+    &__title {
+      color: $text-primary;
+    }
+
+    &__content {
+      color: $text-secondary;
+    }
+  }
+
+  .cdk-overlay-backdrop {
+    background-color: rgba($color-neutral-medium, 0.5) !important;
+  }
+
+  .markdown {
+
+    &__header {
+      background-color: $color-base-dark-2;
+    }
+
+    &__title, textarea {
+      color: $text-secondary;
+    }
+
+    &__divider {
+      background-color: $color-neutral-dark;
+    }
+
+    &__preview {
+      h1, h2, h3, h4, h5, h6 {
+        color: $text-primary;
+      }
+
+      p, li, a {
+        color: $text-secondary;
+      }
+
+      code {
+        color: $text-primary;
+      }
+
+      pre, blockquote {
+        background-color: $color-base-dark-3;
+        p {
+          color: $text-primary;
+        }
+      }
+    }
+  }
+}

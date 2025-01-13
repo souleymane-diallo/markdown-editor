@@ -1,0 +1,27 @@
+// Familles de polices
+$font-family-primary: 'Roboto', sans-serif;
+$font-family-secondary: 'Roboto Slab', serif;
+$font-family-code: 'Roboto Mono', monospace;
+
+// Tailles de texte
+$font-size-base: 15px; // Taille par défaut
+$font-size-sm: 14px;   // Texte petit
+$font-size-md: 16px;   // Texte moyen
+$font-size-semi-large: 20px;
+$font-size-lg: 24px;   // Texte grand
+$font-size-xl: 28px;   // Texte très grand
+$font-size-xxl: 32px;  // Titres principaux
+
+// Espacement des lignes
+$line-height-default: 1.6; // Paragraphe standard
+$line-height-tight: 1.4;   // Compact
+
+// Espacement des caractères
+$letter-spacing-normal: 0px;
+$letter-spacing-wide: 1.5px;
+
+// Styles de texte
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;

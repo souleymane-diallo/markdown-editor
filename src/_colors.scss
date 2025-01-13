@@ -1,0 +1,22 @@
+// Couleurs de base
+$color-base-dark-1: #151619; // Fond sombre principal
+$color-base-dark-2: #1D1F22; // Fond sombre secondaire
+$color-base-dark-3: #2B2D31; // Fond sombre tertiaire
+$color-base-dark-4: #35393F; // Fond sombre quaternaire
+
+$color-neutral-dark: #5A6069; // Gris foncé
+$color-neutral-medium: #7C8187; // Gris moyen
+$color-neutral-light: #C1C4CB; // Gris clair
+$color-neutral-ultralight: #E4E4E4; // Gris ultra clair
+$color-white: #FFFFFF; // Blanc pur
+$color-off-white: #F5F5F5; // Blanc cassé
+//#7C8187
+// Couleurs d'accentuation
+$color-accent-primary: #E46643; // Accent principal (Orange)
+$color-accent-secondary: #F39765; // Accent secondaire (Orange clair)
+
+// Couleurs des textes
+$text-primary: $color-white; // Texte principal clair
+$text-secondary: $color-neutral-light; // Texte secondaire clair
+$text-dark: $color-base-dark-1; // Texte principal sombre
+$text-muted: $color-neutral-medium; // Texte désactivé

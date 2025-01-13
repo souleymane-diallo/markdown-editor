@@ -1,0 +1,15 @@
+@use "../colors" as *;
+@use "../typography" as *;
+
+.preview-mode {
+  background-color: $color-off-white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    text-transform: uppercase;
+    color: $text-muted;
+  }
+}

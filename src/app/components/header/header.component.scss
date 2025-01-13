@@ -1,0 +1,145 @@
+@use "../../../colors" as *;
+@use "../../../typography" as *;
+
+.sidebar-open {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.markdown-header {
+  // background-color: $color-base-dark-2;
+  // color: $color-white;
+  height: 56px;
+
+  &__burger-menu {
+    // background-color: $color-base-dark-4;
+    height: 56px;
+    width: 56px;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: $color-accent-primary;
+    }
+  }
+
+  &__logo-desktop {
+    display: none;
+  }
+
+  &__separator {
+    display: none;
+  }
+  &__nav-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__name-file {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__delete-svg {
+    color: $color-neutral-medium;
+    transition: color .3s ease;
+  }
+
+  &__delete-svg:hover {
+    color: $color-accent-primary;
+  }
+
+  &__button-save {
+    background-color: $color-accent-primary;
+    padding: 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: $color-accent-secondary;
+    }
+  }
+  &__text-button {
+    display: none;
+    color: $text-primary;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .markdown-header {
+    height: 72px;
+
+    &__burger-menu {
+      height: 72px;
+      width: 72px;
+    }
+
+    &__content-doc {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    &__input:focus {
+      border-bottom: 1px solid $color-off-white;
+      width: 400px;
+      caret-color: $color-accent-primary;
+      text-indent: 5px;
+    }
+
+    &__label {
+      display: block;
+      color: $text-muted;
+      font-weight: $font-weight-light;
+      font-size: 13px;
+    }
+
+    &__button-save {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin-right: 14px;
+    }
+
+    &__text-button {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .markdown-header {
+    &__logo-desktop {
+      display: block;
+    }
+
+    &__separator {
+      width: 1px;
+      height: 40px;
+      background-color: $text-muted;
+      display: block;
+    }
+
+    &__input:focus {
+      border-bottom: 1px solid $color-off-white;
+      width: 400px;
+      caret-color: $color-accent-primary;
+      text-indent: 5px;
+    }
+  }
+}

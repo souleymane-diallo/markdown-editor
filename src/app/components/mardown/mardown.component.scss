@@ -1,0 +1,188 @@
+@use "../../../colors" as *;
+@use "../../../typography" as *;
+
+.sidebar-open {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.markdown {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  /* Editor and Preview Containers */
+  &__editor-container,
+  &__preview-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /* Hidden Classes for Toggle */
+    &.hidden {
+      display: none;
+    }
+  }
+
+  /* Header Style */
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-regular;
+    color: $text-muted;
+    letter-spacing: 2px;
+  }
+
+  /* Divider for Desktop */
+  &__divider {
+    display: none;
+  }
+
+  /* Textarea Editor */
+  &__editor,
+  &__preview {
+    flex: 1;
+    font-family: $font-family-code;
+    font-size: $font-size-sm;
+    color: $color-base-dark-4;
+    padding: 1rem;
+  }
+
+  &__preview {
+    font-family: $font-family-secondary;
+  }
+  /* Hidden Class for Mobile Toggle */
+  .preview-toggle-mobile {
+    display: block;
+  }
+}
+
+/* Responsive Layout for Desktop */
+@media screen and (min-width: 768px) {
+  .markdown {
+    flex-direction: row;
+    &__editor-container,
+    &__preview-container {
+       flex: 1;
+    }
+
+    &__divider {
+      display: block;
+      width: 1px;
+      // background-color: $color-neutral-ultralight;
+    }
+
+    .preview-toggle-mobile {
+      display: none;
+    }
+    .preview-toggle {
+      height: 12px;
+    }
+
+    &__preview-icon {
+      color: $color-neutral-medium;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: $color-accent-primary;
+      }
+    }
+  }
+}
+
+:host ::ng-deep .markdown__preview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-base-dark-4;
+    font-weight: $font-weight-bold;
+  }
+
+  h1 {
+    font-size: $font-size-xxl;
+  }
+
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-light;
+  }
+
+  h3 {
+    font-size: $font-size-lg;
+  }
+
+  h4 {
+    font-size: $font-size-semi-large;
+  }
+
+  h5 {
+    font-size: $font-size-md;
+  }
+
+  h6 {
+    color: $color-accent-primary;
+    font-size: $font-size-md;
+  }
+
+  ol, ul {
+    margin-left: 24px;
+  }
+
+  li {
+    padding-left: 5px;
+  }
+
+  ul > li::marker {
+    color: $color-accent-primary;
+  }
+
+  p, li {
+    font-size: $font-size-sm;
+    color: $text-muted;
+    font-weight: $font-weight-regular;
+    line-height: 24px;
+  }
+
+  pre {
+    border-radius: 4px;
+    padding: 24px;
+  }
+
+  code {
+    color: $color-base-dark-4;
+    font-family: $font-family-code;
+    font-weight: $font-weight-regular;
+    line-height: 24px;
+  }
+
+  a {
+    color: $color-base-dark-4;
+  }
+
+  blockquote {
+    padding: 24px;
+    border-radius: 4px;
+    border-left: 4px solid $color-accent-primary;
+    margin-left: 10px;
+    margin-right: 0;
+
+    p {
+      font-weight: $font-weight-bold;
+      color: $color-base-dark-4;
+      margin: 0;
+    }
+  }
+}
+
+
+
+
